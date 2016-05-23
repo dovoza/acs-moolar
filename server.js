@@ -11,7 +11,7 @@ var users = require('./routes/users');
 var app = express();
 
 var mongojs = require('mongojs');
-var dburl = 'localhost/acs';
+var dburl = 'admin:7aGglTIsldbd@localhost/acs';
 var collections = ["users", "paystack", "incompletestack", "instr"];
 var db = mongojs(dburl, collections);
 var ObjectId = db.ObjectId;
