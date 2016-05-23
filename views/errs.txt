@@ -1,0 +1,326 @@
+line 20 column 553 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 553 - Warning: <a> unexpected '=', expected attribute name
+line 20 column 553 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 553 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 667 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 667 - Warning: <a> unexpected '=', expected attribute name
+line 20 column 667 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 667 - Warning: <a> unexpected or duplicate quote mark
+line 20 column 6186 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 6186 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 6186 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9085 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9085 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9085 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9085 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9433 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9433 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9433 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 9433 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 20247 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 20247 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 20247 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 20247 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 24356 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 24356 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 24356 - Warning: named entity &apos; only defined in XML/XHTML
+line 20 column 24356 - Warning: named entity &apos; only defined in XML/XHTML
+line 2 column 1 - Warning: <meta> proprietary attribute "charset"
+line 2 column 1 - Warning: <meta> lacks "content" attribute
+line 4 column 1 - Warning: <link> inserting "type" attribute
+line 6 column 1 - Warning: <link> inserting "type" attribute
+line 7 column 1 - Warning: <link> inserting "type" attribute
+line 8 column 1 - Warning: <link> inserting "type" attribute
+line 9 column 1 - Warning: <link> inserting "type" attribute
+line 10 column 1 - Warning: <script> inserting "type" attribute
+line 11 column 1 - Warning: <script> inserting "type" attribute
+line 12 column 1 - Warning: <script> inserting "type" attribute
+line 13 column 1 - Warning: <script> inserting "type" attribute
+line 14 column 1 - Warning: <script> inserting "type" attribute
+line 15 column 1 - Warning: <script> inserting "type" attribute
+line 16 column 1 - Warning: <script> inserting "type" attribute
+line 20 column 1 - Warning: <div> proprietary attribute "ng-app"
+line 20 column 89 - Warning: <div> proprietary attribute "ng-controller"
+line 20 column 391 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 553 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 667 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 1251 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 1251 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 1702 - Warning: <form> proprietary attribute "role"
+line 20 column 1702 - Warning: <form> lacks "action" attribute
+line 20 column 1916 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 1916 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 2132 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 2132 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 2435 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 3021 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 3021 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 3472 - Warning: <form> proprietary attribute "role"
+line 20 column 3472 - Warning: <form> lacks "action" attribute
+line 20 column 3657 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 3729 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 3968 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 4045 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 4278 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 4352 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 4589 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 4665 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 4904 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 4981 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 5207 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 5278 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 5502 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 5572 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 5827 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 5827 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 6186 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 6186 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 6528 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 6528 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 6884 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 6884 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 7179 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 7179 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 7806 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 7806 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 8263 - Warning: <form> proprietary attribute "role"
+line 20 column 8263 - Warning: <form> lacks "action" attribute
+line 20 column 8450 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 8524 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 8750 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 8822 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 9085 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 9085 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 9433 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 9433 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 9718 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 9718 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 10347 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 10347 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 10804 - Warning: <form> proprietary attribute "role"
+line 20 column 10804 - Warning: <form> lacks "action" attribute
+line 20 column 10986 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 11055 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 11286 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 11358 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 11592 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 11665 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 11899 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 11972 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 12169 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 12169 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 12793 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 12793 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 13244 - Warning: <form> proprietary attribute "role"
+line 20 column 13244 - Warning: <form> lacks "action" attribute
+line 20 column 13424 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 13491 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 13729 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 13803 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 14035 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 14106 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 14338 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 14409 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 14639 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 14709 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 14970 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 14970 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 15252 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 15252 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 15874 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 15874 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 16331 - Warning: <form> proprietary attribute "role"
+line 20 column 16331 - Warning: <form> lacks "action" attribute
+line 20 column 16513 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 16582 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 16812 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 16883 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 17117 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 17190 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 17411 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 17478 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 17730 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 17730 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 18058 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 18058 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 18337 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 18337 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 18961 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 18961 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 19430 - Warning: <form> proprietary attribute "role"
+line 20 column 19430 - Warning: <form> lacks "action" attribute
+line 20 column 19616 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 19689 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 19914 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 19985 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 20247 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 20247 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 20593 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 20593 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 20966 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 20966 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 21284 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 21284 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 21625 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 21625 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 21885 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 21885 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 22510 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 22510 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 22964 - Warning: <form> proprietary attribute "role"
+line 20 column 22964 - Warning: <form> lacks "action" attribute
+line 20 column 23145 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 23213 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 23446 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 23518 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 23744 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 23813 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 24033 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 24099 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 24356 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 24356 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 24692 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 24692 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 25041 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 25041 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 25324 - Warning: <textarea> proprietary attribute "ng-model"
+line 20 column 25324 - Warning: <textarea> proprietary attribute "placeholder"
+line 20 column 25615 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 26196 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 26196 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 26644 - Warning: <form> proprietary attribute "role"
+line 20 column 26644 - Warning: <form> lacks "action" attribute
+line 20 column 26823 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 26889 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 27120 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 27190 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 27387 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 27966 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 27966 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 28426 - Warning: <form> proprietary attribute "role"
+line 20 column 28426 - Warning: <form> lacks "action" attribute
+line 20 column 28604 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 28668 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 28865 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 29448 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 29448 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 29899 - Warning: <form> proprietary attribute "role"
+line 20 column 29899 - Warning: <form> lacks "action" attribute
+line 20 column 30079 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 30146 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 30378 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 30449 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 30646 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 31226 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 31226 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 31680 - Warning: <form> proprietary attribute "role"
+line 20 column 31680 - Warning: <form> lacks "action" attribute
+line 20 column 31865 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 31932 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 32129 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 32710 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 32710 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 33167 - Warning: <form> proprietary attribute "role"
+line 20 column 33167 - Warning: <form> lacks "action" attribute
+line 20 column 33349 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 33418 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 33652 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 33725 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 33922 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 34504 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 34504 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 34961 - Warning: <form> proprietary attribute "role"
+line 20 column 34961 - Warning: <form> lacks "action" attribute
+line 20 column 35143 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 35212 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 35446 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 35519 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 35716 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 36298 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 36298 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 36755 - Warning: <form> proprietary attribute "role"
+line 20 column 36755 - Warning: <form> lacks "action" attribute
+line 20 column 36937 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 37006 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 37240 - Warning: <select> proprietary attribute "ng-model"
+line 20 column 37313 - Warning: <option> proprietary attribute "ng-repeat"
+line 20 column 37577 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 37577 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 37796 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 38378 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 38378 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 38837 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 38837 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 39275 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 39275 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 39738 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 39738 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 40188 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 40188 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 40629 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 40629 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 41296 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 41296 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 41761 - Warning: <form> proprietary attribute "role"
+line 20 column 41761 - Warning: <form> lacks "action" attribute
+line 20 column 41971 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 41971 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 42182 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 42182 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 42486 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 43078 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 43078 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 43549 - Warning: <form> proprietary attribute "role"
+line 20 column 43549 - Warning: <form> lacks "action" attribute
+line 20 column 43762 - Warning: <input> proprietary attribute "ng-model"
+line 20 column 43762 - Warning: <input> proprietary attribute "placeholder"
+line 20 column 43977 - Warning: <button> proprietary attribute "ng-model"
+line 20 column 43977 - Warning: <button> proprietary attribute "ng-click"
+line 20 column 44600 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 44600 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 45048 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 45048 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 45500 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 45500 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 45946 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 45946 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 46407 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 46407 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 46853 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 46853 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 47302 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 47302 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 47757 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 47757 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 48203 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 48203 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 48671 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 48671 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 49133 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 49133 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 49606 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 49606 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 50058 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 50058 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 50510 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 50510 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 50987 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 50987 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 51446 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 51446 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 51902 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 51902 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 52351 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 52351 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 52815 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 52815 - Warning: <a> proprietary attribute "data-parent"
+line 20 column 53274 - Warning: <a> proprietary attribute "data-toggle"
+line 20 column 53274 - Warning: <a> proprietary attribute "data-parent"
+Info: Document content looks like HTML Proprietary
+318 warnings, 0 errors were found!
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please fill bug reports and queries using the "tracker" on the Tidy web site.
+Additionally, questions can be sent to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium

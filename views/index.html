@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Render</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap-duallistbox/src/bootstrap-duallistbox.css">
+    <!--Angular Plugins-->
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/javascripts/ultimateDT/dist/3.2.1/css/ultimate-datatable-3.2.1.min.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-bootstrap-duallistbox/common/module.js"></script>
+    <script src="/bower_components/angular-bootstrap-duallistbox/src/directives/bsDuallistbox.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script src="/javascripts/ultimateDT/dist/3.2.1/js/ultimate-datatable-3.2.1.min.js"></script>
+    <script src="/bower_components/Chart.js/Chart.min.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script type="text/javascript" src="/javascripts/render.js"></script>
+    <!--End Angular Plugins-->
+</head>
+
+<body>
+    <div ng-app="app56cd6680767828e40f73208c">
+        <div class="bool-container container-fluid" ng-controller="ctrl56cd66ae767828e40f73208e">
+            <div class="col-sm-12 col-sm-offset-0" id="obj56d00d26767828e40f732090">
+                <div class="tab-container bool-container">
+                    <ul class="nav bool-container nav-pills nav-normal" id="obj56d00d26767828e40f732091">
+                        <li id="obj56d00d27767828e40f732097"><a href="#dbConftab" '="" data-toggle="tab">DB Connection</a></li> <li id="obj56d00d27767828e40f732098"><a href="#varConftab" '="" data-toggle="tab">Variables Setup</a>
+                        </li>
+                        <li id="obj56d00d27767828e40f732099"><a href="#mapConftab" '="" data-toggle="tab">Mappings</a></li> <li id="obj56d00d27767828e40f73209a"><a href="#customConftab" '="" data-toggle="tab">Custom Query</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content bool-container">
+                        <div class="tab-pane fade bool-container" id="dbConftab">
+                            <div class="col-sm-12 col-sm-offset-0" id="obj56d00e51767828e40f73209b">
+                                <div class="bool-container panel panel-default">
+                                    <div class="col-sm-0 col-sm-offset-0" id="obj56d00e51767828e40f73209c">
+                                        <div class="bool-container panel-body">
+                                            <h2 class="bool-container">Connection Configuration</h2>
+                                            <div class="col-sm-12" id="obj56d02100767828e40f73209e">
+                                                <form class="bool-container form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label for="dbType" class="col-sm-2 control-label">DB Type:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-model="dbType">
+                                                                <option ng-repeat="item in dbTypes" value="{{item.val}}">{{item.disp}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d02220767828e40f7320a0">
+                                                        <label for="dbHost" class="col-sm-2 control-label">Host:</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control bool-input" ng-model="dbHost" placeholder="hostname or ip address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d02275767828e40f7320a1">
+                                                        <label for="dbName" class="col-sm-2 control-label">DB Name:</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control bool-input" ng-model="dbName" placeholder="database name or schema">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d022a5767828e40f7320a2">
+                                                        <label for="dbPort" class="col-sm-2 control-label">DB Port:</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" class="form-control bool-input" ng-model="dbPort" placeholder="database port">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d022db767828e40f7320a3">
+                                                        <label for="dbUser" class="col-sm-2 control-label">DB Username:</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control bool-input" ng-model="dbUser" placeholder="username">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d02303767828e40f7320a4">
+                                                        <label for="dbPass" class="col-sm-2 control-label">DB Password:</label>
+                                                        <div class="col-sm-8">
+                                                            <input type="password" class="form-control bool-input" ng-model="dbPass">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="form-group" id="obj56d02367767828e40f7320a5">
+                                                <div class="col-sm-3 col-sm-offset-0">
+                                                    <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus btn-block" ng-model="dbConnConfSaveBtn">Save Configuration</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade bool-container" id="varConftab">
+                            <div class="col-sm-12 col-sm-offset-0" id="obj56d0312b767828e40f7320a7">
+                                <div class="bool-container panel panel-default">
+                                    <div class="col-sm-0 col-sm-offset-0" id="obj56d0312b767828e40f7320a8">
+                                        <div class="bool-container panel-body">
+                                            <h2 class="bool-container">Variable Setup</h2>
+                                            <div class="col-sm-12" id="obj56d3731ee2d336ce0e0fd6f4">
+                                                <form class="bool-container form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label for="varType" class="col-sm-2 control-label">Variable Type:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-model="varType">
+                                                                <option ng-repeat="item in varTypes" value="{{item.val}}">{{item.disp}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lstOfForms" class="col-sm-2 control-label">Form:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-model="lstOfForms">
+                                                                <option ng-repeat="item in dbTypes" value="{{item.val}}">{{item.disp}}</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="selFormVars" class="col-sm-2 control-label">Form Variables:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-options="item as item.disp for item in dbTypes track by item.val" multiple bs-duallistbox="" ng-model="selFormVars"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lstOfVars" class="col-sm-2 control-label">Variables:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-options="item as item.disp for item in varTypes track by item.val" multiple bs-duallistbox="" ng-model="lstOfVars"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d5edfdc2bb12691f28ab5f">
+                                                        <div class="col-sm-4 col-sm-offset-0">
+                                                            <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus" ng-model="addToVarListBtn">Add To Set</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-8" id="obj56d61e29c2bb12691f28ab76">
+                                                <div class="bool-dt" ultimate-datatable="dt56d61e29c2bb12691f28ab76"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade bool-container" id="mapConftab">
+                            <div class="col-sm-12 col-sm-offset-0" id="obj56d60582c2bb12691f28ab60">
+                                <div class="bool-container panel panel-default">
+                                    <div class="col-sm-0 col-sm-offset-0" id="obj56d60582c2bb12691f28ab61">
+                                        <div class="bool-container panel-body">
+                                            <h2 class="bool-container">Mappings Configuration</h2>
+                                            <div class="col-sm-12" id="obj56d607ccc2bb12691f28ab63">
+                                                <form class="bool-container form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label for="lstOfSelVars" class="col-sm-2 control-label">Selected Variables:</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control bool-input" ng-options="item as item.disp for item in dbTypes track by item.val" multiple bs-duallistbox="" ng-model="lstOfSelVars"></select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-12" id="obj56d607f1c2bb12691f28ab64">
+                                                <form class="bool-container form-in-line" role="form">
+                                                    <div class="form-group" id="obj56d618d9c2bb12691f28ab73">
+                                                        <label for="mapToCollection" class="col-sm-2 control-label">Map To Collection:</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" class="form-control bool-input" ng-model="mapToCollection" placeholder="Collection in database">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d60950c2bb12691f28ab66">
+                                                        <label for="mapToField" class="col-sm-2 control-label">Map To Field:</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" class="form-control bool-input" ng-model="mapToField" placeholder="Field in collection">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d60a02c2bb12691f28ab67">
+                                                        <div class="col-sm-4 col-sm-offset-0">
+                                                            <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus btn-sm" ng-model="mapToFieldAddBtn">Add Mapping</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-8" id="obj56d61adcc2bb12691f28ab74">
+                                                <div class="bool-dt" ultimate-datatable="dt56d61adcc2bb12691f28ab74"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade bool-container" id="customConftab">
+                            <div class="col-sm-6 col-sm-offset-0" id="obj56d60d0cc2bb12691f28ab68">
+                                <div class="bool-container panel panel-default">
+                                    <div class="col-sm-0 col-sm-offset-0" id="obj56d60d0cc2bb12691f28ab69">
+                                        <div class="bool-container panel-body">
+                                            <h2 class="bool-container">Custom Query</h2>
+                                            <div class="col-sm-12" id="obj56d6107fc2bb12691f28ab6e">
+                                                <form class="bool-container form-horizontal" role="form">
+                                                    <div class="form-group" id="obj56d6110ec2bb12691f28ab6f">
+                                                        <label for="customQueryInp" class="col-sm-2 control-label">Query:</label>
+                                                        <div class="col-sm-8">
+                                                            <textarea class="form-control bool-input" ng-model="customQueryInp" placeholder="Write query statement"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group" id="obj56d61162c2bb12691f28ab70">
+                                                        <div class="col-sm-3 col-sm-offset-0">
+                                                            <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus btn-sm" ng-model="customQuerySaveBtn">Save Query</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-sm-offset-0" id="obj56d60d3fc2bb12691f28ab6a">
+                                <div class="bool-container panel panel-default">
+                                    <div class="col-sm-0 col-sm-offset-0" id="obj56d60d3fc2bb12691f28ab6b">
+                                        <div class="bool-container panel-body">
+                                            <h2 class="bool-container">Hash (#) Variables</h2>
+                                            <div class="col-sm-12" id="obj56d6138bc2bb12691f28ab71">
+                                                <div class="bool-dt" ultimate-datatable="dt56d6138bc2bb12691f28ab71"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

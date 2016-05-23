@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ACS</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap-duallistbox/src/bootstrap-duallistbox.css">
+    <!--Angular Plugins-->
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/javascripts/ultimateDT/dist/3.2.1/css/ultimate-datatable-3.2.1.min.css">
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-bootstrap-duallistbox/common/module.js"></script>
+    <script src="/bower_components/angular-bootstrap-duallistbox/src/directives/bsDuallistbox.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script src="/javascripts/ultimateDT/dist/3.2.1/js/ultimate-datatable-3.2.1.min.js"></script>
+    <script src="/bower_components/Chart.js/Chart.min.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script type="text/javascript" src="/javascripts/acs.js"></script>
+    <!--End Angular Plugins-->
+</head>
+
+<body>
+    <div ng-app="app5733acc47b6ec69067950e75">
+        <div class="bool-container container-fluid" ng-controller="ctrl5733af407b6ec69067950e83">
+            <div class="col-sm-12 col-sm-offset-0" id="obj5733ada17b6ec69067950e771">
+                <div class="bool-container panel panel-primary">
+                    <div class="panel-heading" id="obj5733ada17b6ec69067950e78">
+                        <div class="bool-container panel-title">
+                            <center>
+                                <h3>Welcome To ACS-MOOLAR</h3></center>
+                        </div>
+                    </div>
+                    <div class="col-sm-0 col-sm-offset-0" id="obj5733ada17b6ec69067950e79">
+                        <div class="bool-container panel-body">
+                            <div class="col-sm-12 col-sm-offset-0" id="obj5733ae657b6ec69067950e80">
+                                <div class="col-sm-10 col-sm-offset-1" id="obj573884087dfd5b3a65f78dac">
+                                    <nav class="navbar navbar-toolbar navbar-default">
+                                        <div class="container-fluid bool-custom">
+                                            <div class="navbar-header bool-custom">
+                                                <a class="navbar-brand" href="#"> <img alt="Automated Circular System" src="..."> </a>
+                                            </div>
+                                            <button type="button" class="bool-input pull-right navbar-btn btn btn-default btn-sm glyphicon glyphicon-plus btn-primary" ng-model="registerBtn" ng-click="func5733b06e2c0df60768a81ff1()" ng-show="loggedUser.length == 0">Register</button>
+                                            <button type="button" class="bool-input pull-right navbar-btn btn btn-default btn-sm glyphicon glyphicon-user btn-success" ng-model="loginrBtn" ng-click="func5733b0ae2c0df60768a81ff2()" ng-show="loggedUser.length == 0">Login</button>
+                                            <p class="navbar-text navbar-right" ng-show="loggedUser.length != 0">Welcome: <strong><span class="glyphicon glyphicon-user"></span><span class="label label-success">{{loggedUser[0].uname}}</span></strong></p>
+                                            <button type="button" class="bool-input pull-right navbar-btn btn btn-default btn-sm glyphicon glyphicon-user btn-success" ng-model="loginrBtn" ng-click="userLogout()" ng-show="loggedUser.length != 0">Logout</button>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="col-sm-12 col-sm-offset-0" id="obj57387b8b5c3d0fc662e693bc">
+                                    <div class="jumbotron container-fluid bool-custom">
+                                        <div id="welcomeInfo">
+                                            <center><span><h1>Rules and Tips</h1></span></center>
+                                            <div class="list-group col-sm-6">
+                                                <a href="#" class="list-group-item active">Start with E 500.00</a>
+                                                <a href="#" class="list-group-item">Earn up to E 7500.00</a>
+                                                <a href="#" class="list-group-item">Rejoin as many times by creating a new proxy, each one is worth E 500.00</a>
+                                                <a href="#" class="list-group-item">To get maximum amount follow all instructions on the SMSs</a>
+                                                <a href="#" class="list-group-item">You have 24 hours to fullfill an instruction</a>
+                                                <a href="#" class="list-group-item">Only join if you have the E 500.00 and are willing to play by the rules</a>
+                                            </div>
+                                            <div class="list-group col-sm-6">
+                                                <a href="#" class="list-group-item active">level 0 --> Join with E 500.00</a>
+                                                <a href="#" class="list-group-item">level 1 --> Obtain E 2500.00 and return E 1500.00</a>
+                                                <a href="#" class="list-group-item">level 2 --> Obtain E 7500.00 and return E 1500.00</a>
+                                                <a href="#" class="list-group-item">Higher levels --> Will be announced once they are ready</a>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="alert alert-info" role="alert">It is very easy to join, just hit register and fill up the form, you will get an sms after a successful registration</div>
+                                                <div class="alert alert-warning" role="alert">Please note that all our notifications are done through sms, thus immediate responses are expected from members.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1" id="obj5733adf17b6ec69067950e7a">
+                                            <div class="bool-container panel panel-default">
+                                                <div class="panel-heading" id="obj5733adf17b6ec69067950e7b">
+                                                    <div class="bool-container panel-title">
+                                                        <h3>Enter Account Info:</h3></div>
+                                                </div>
+                                                <div class="col-sm-0 col-sm-offset-0" id="obj5733adf17b6ec69067950e7c">
+                                                    <div class="bool-container panel-body">
+                                                        <div class="col-sm-12 col-sm-offset-0" id="obj5733b799ab80ea936836b4d1">
+                                                            <form class="bool-container form-horizontal" role="form">
+                                                                <div class="form-group" id="obj5733b7e1ab80ea936836b4d2">
+                                                                    <label for="fname" class="col-sm-2 control-label">First Name:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="fname" placeholder="e.g John">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b7fbab80ea936836b4d3">
+                                                                    <label for="lname" class="col-sm-2 control-label">Last Name:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="lname" placeholder="e.g Doe">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b848ab80ea936836b4d4">
+                                                                    <label for="contactNum" class="col-sm-2 control-label">Contact:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="contactNum" placeholder="e.g +26876637487">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b87cab80ea936836b4d5">
+                                                                    <label for="username" class="col-sm-2 control-label">Username:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="username" placeholder="e.g john">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="country" class="col-sm-2 control-label">Country:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <select class="form-control bool-input" ng-model="country">
+                                                                            <option ng-repeat="item in lstCountries" value="{{item.val}}">{{item.disp}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="bank" class="col-sm-2 control-label">Bank:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <select class="form-control bool-input" ng-model="bank">
+                                                                            <option ng-repeat="item in lstBanks" value="{{item.val}}">{{item.disp}}</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b901ab80ea936836b4d8">
+                                                                    <label for="bankAccount" class="col-sm-2 control-label">Account #:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="bankAccount" placeholder="account number">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b930ab80ea936836b4d9">
+                                                                    <label for="bankAccountHolder" class="col-sm-2 control-label">Account Holder:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="bankAccountHolder" placeholder="account holder&apos;s name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b97cab80ea936836b4da">
+                                                                    <label for="passkey" class="col-sm-2 control-label">Password:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="password" class="form-control bool-input" ng-model="passkey">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b992ab80ea936836b4db">
+                                                                    <label for="confpasskey" class="col-sm-2 control-label">Confirm:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="password" class="form-control bool-input" ng-model="confpasskey">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b9c8ab80ea936836b4dc">
+                                                                    <div class="col-sm-4 col-sm-offset-2">
+                                                                        <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus btn-sm btn-info" ng-model="regSaveBtn" ng-click="func5733bcdbc3bf1b32692373e5()">Register</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-sm-offset-2" id="obj5733ae1d7b6ec69067950e7d">
+                                            <div class="bool-container panel panel-success">
+                                                <div class="panel-heading" id="obj5733ae1d7b6ec69067950e7e">
+                                                    <div class="bool-container panel-title">
+                                                        <h3>Login here:</h3></div>
+                                                </div>
+                                                <div class="col-sm-0 col-sm-offset-0" id="obj5733ae1d7b6ec69067950e7f">
+                                                    <div class="bool-container panel-body">
+                                                        <div class="col-sm-12 col-sm-offset-0" id="obj5733b197e8348b4f68d3724c">
+                                                            <form class="bool-container form-horizontal" role="form">
+                                                                <div class="form-group" id="obj5733b205e8348b4f68d3724d">
+                                                                    <label for="logUname" class="col-sm-2 control-label">Username:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="text" class="form-control bool-input" ng-model="logUname" placeholder="username">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b241e8348b4f68d3724e">
+                                                                    <label for="logPass" class="col-sm-2 control-label">Password:</label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="password" class="form-control bool-input" ng-model="logPass">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group" id="obj5733b294e8348b4f68d3724f">
+                                                                    <div class="col-sm-4 col-sm-offset-2">
+                                                                        <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-user btn-sm" ng-model="logLoginBtn" ng-click="func5733c02088c2df8e69761970()">login</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-sm-offset-0" id="obj5733c0e68cf6330c6a5f5944">
+                                            <div class="bool-container panel panel-default">
+                                                <div class="panel-heading" id="obj5733c0e68cf6330c6a5f5945">
+                                                    <div class="bool-container panel-title">
+                                                        <h3>Account Information</h3></div>
+                                                </div>
+                                                <div class="col-sm-0 col-sm-offset-0" id="obj5733c0e68cf6330c6a5f5946">
+                                                    <div class="bool-container panel-body">
+                                                        <div class="col-sm-6 col-sm-offset-6" id="obj5733c22065bd29a96a92b089">
+                                                            <div class="well container-fluid well-lg bool-custom" bool-event="true">
+                                                                <div class="bool-container bool-custom">
+                                                                    <div class="col-sm-12 col-sm-offset-0" id="obj5733c3314c938cf26a4d20a7">
+                                                                        <div class="custom-htm" bool-event="true">
+                                                                            <p class="navbar-text navbar-right">Welcome: <strong><span class="glyphicon glyphicon-user"></span><span class="label label-success">{{loggedUser[0].uname}}</span></strong></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-10 col-sm-offset-1" id="obj5733c8756a0a77636ce42c91">
+                                                            <div class="tab-container bool-container">
+                                                                <ul class="nav bool-container nav-pills nav-normal" id="obj5733c8756a0a77636ce42c92">
+                                                                    <li id="obj5733c8756a0a77636ce42c97" class="active"><a href="#status" data-toggle="tab">Status</a></li>
+                                                                    <li id="obj5733c8766a0a77636ce42c98"><a href="#due" data-toggle="tab">Due Payments</a>
+                                                                    </li>
+                                                                    <li id="obj5733c8766a0a77636ce42c99">
+                                                                        <a href="#payouts" data-toggle="tab">Payouts</a></li>
+                                                                </ul>
+                                                                <div class="col-sm-10 col-sm-offset-1" id="obj5733c8756a0a77636ce42c93">
+                                                                    <div class="tab-content bool-container bool-custom">
+                                                                        <div class="tab-pane fade bool-container in active" id="status">
+                                                                            <div class="col-sm-8 col-sm-offset-2" id="obj5733ca3f55f6869c6d0c74d9">
+                                                                                <div class="well container-fluid well-lg bool-custom" bool-event="true">
+                                                                                    <div class="bool-container bool-custom">
+                                                                                        <div class="col-sm-12 col-sm-offset-0" id="obj5733cdb517042ff86d8f338b">
+                                                                                            <div class="custom-htm" bool-event="true">
+                                                                                                <div class="alert alert-info" role="alert">You must have E 500.00 to make a new proxy <span class="label label-default">E 500.00</span></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12 col-sm-offset-0" id="obj5733cac855f6869c6d0c74da">
+                                                                                            <form class="bool-container form-in-line" role="form">
+                                                                                                <!--<div class="form-group" id="obj5733cbb455f6869c6d0c74db">
+                                                                        <label for="dayMonth" class="col-sm-2 control-label">Day of Month:</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="text" class="form-control bool-input" ng-model="dayMonth" placeholder="e.g 25 or 17">
+                                                                        </div>
+                                                                    </div>-->
+                                                                                                <div class="form-group" id="obj5733ccbc55f6869c6d0c74dc">
+                                                                                                    <div class="col-sm-2 col-sm-offset-0">
+                                                                                                        <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-plus btn-sm btn-success" ng-model="savePledgeBtn" ng-click="func5733d165d8d777276e976db2()">Create Proxy</button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12">
+                                                                                <button type="button" class="bool-input btn btn-default btn-lg glyphicon glyphicon-envelope btn-sm btn-warning" ng-click="showMakePledge()">Create New Proxy</button>
+                                                                                <div class="col-sm-12">
+                                                                                    <h2><span class="label label-default">Current Proxies:</span></h2></div>
+                                                                                <div ng-repeat="item in currPledges track by $index" class="bubble me col-sm-4">
+                                                                                    <p>Proxy ID: {{item._id}}</p>
+                                                                                    <p>Amount: E {{item.amount}}</p>
+                                                                                    <p>Level: {{item.level}}</p>
+                                                                                    <p>Day: {{item.daymonth}} of every month</p>
+                                                                                    <p>Next Payout: E 1500</p>
+                                                                                    <p>Time left:
+                                                                                        <div class="progress">
+                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                                                                60%
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane fade bool-container" id="due">
+                                                                            <div ng-repeat="item in currInstrs track by $index" class="bubble me col-sm-4">
+                                                                                <p>Instruction ID: {{item._id}}</p>
+                                                                                <p>Amount: E {{item.amount}}</p>
+                                                                                <p>Status: <span class="label label-info">{{item.activity}}</span></p>
+                                                                                <p>Account: {{item.accToServe +' | '+ item.accholderToServe}}</p>
+                                                                                <p>Serving: {{item.userToServe}}</p>
+                                                                                <p>Contact: {{item.contact}}</p>
+                                                                                <p>Time left:
+                                                                                    <div class="progress">
+                                                                                        <div class="progress-bar" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="24" style="width: 60%;">
+                                                                                            9 hours
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </p>
+                                                                                <p ng-show="item.activity == 'active'">
+                                                                                    <button type="button" class="btn btn-danger btn-sm paid" ng-click="paidInstr(item._id, 'pending')">I've Paid</button>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="tab-pane fade bool-container" id="payouts">
+                                                                            <div ng-repeat="item in currPayouts track by $index" class="bubble me col-sm-4">
+                                                                                <p>Instruction ID: {{item._id}}</p>
+                                                                                <p>Amount: E {{item.amount}}</p>
+                                                                                <p>Status: <span class="label label-info">{{item.activity}}</span></p>
+                                                                                <p>Account: {{item.accToServe +' | '+ item.accholderToServe}}</p>
+                                                                                <p>Served By: {{item.uname}}</p>
+                                                                                <p>Contact: {{item.contact}}</p>
+                                                                                <p>Time left:
+                                                                                    <div class="progress">
+                                                                                        <div class="progress-bar" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="24" style="width: 60%;">
+                                                                                            9 hours
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </p>
+                                                                                <p ng-show="item.activity == 'pending'">
+                                                                                    <button type="button" class="btn btn-success btn-sm paid" ng-click="paidInstr(item._id, 'complete'); moveToStack(item);">I Got it!</button>
+                                                                                </p>
+                                                                                <p ng-show="item.activity == 'active'">
+                                                                                    <button type="button" class="btn btn-warning btn-sm paid" ng-click="paidInstr(item._id, 'incomplete'); moveToIncompleteStack(item);">Never Got it!</button>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1" id="obj5733c1328cf6330c6a5f5947">
+                                            <div class="bool-container panel panel-danger">
+                                                <div class="panel-heading" id="obj5733c1328cf6330c6a5f5948">
+                                                    <div class="bool-container panel-title">
+                                                        <h3>Administration Panel</h3></div>
+                                                </div>
+                                                <div class="col-sm-0 col-sm-offset-0" id="obj5733c1328cf6330c6a5f5949">
+                                                    <div class="bool-container panel-body">
+                                                        <div class="col-sm-10 col-sm-offset-1" id="obj573cddcbd24f3f1a384973ae">
+                                                            <div class="tab-container bool-container">
+                                                                <ul class="nav bool-container nav-pills nav-normal" id="obj573cddcbd24f3f1a384973af">
+                                                                    <li id="obj573cddccd24f3f1a384973b5" class="active"><a href="#level0" data-toggle="tab">Level 0</a></li>
+                                                                    <li id="obj573cddccd24f3f1a384973b9"><a href="#level1" data-toggle="tab">Level 1</a></li>
+                                                                    <li id="obj573cddccd24f3f1a384973b6"><a href="#level2" data-toggle="tab">Level 2</a></li>
+                                                                    <li id="obj573cddccd24f3f1a384973b7"><a href="#level3" data-toggle="tab">Level 3</a></li>
+                                                                    <li id="obj573cddcdd24f3f1a384973b8"><a href="#level4" data-toggle="tab">Level 4</a></li>
+                                                                </ul>
+                                                                <div class="tab-content bool-container bool-custom">
+                                                                    <div class="tab-pane fade bool-container in active" id="level0">
+                                                                        <div class="bool-container container-fluid">
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bd">
+                                                                                <div class="bool-container panel panel-default">
+                                                                                    <div class="panel-heading" id="obj5733e755f37b4a276f98e9be">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Due Payments</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bf">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in newUsers track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button>Send Reminder</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Payouts Due</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in inlineL1 track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myPayout">Pay Out</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Newbies </h3>
+                                                                                            <center>
+                                                                                                <div class="pull-right">
+                                                                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myPayout" ng-click="initPayout()">Initialise Payout</button>
+                                                                                                </div>
+                                                                                            </center>
+                                                                                            <h3> <span class="label label-default">Total: {{'E' + totamtnew + '.00'}}</span></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>Userid</th>
+                                                                                                    <th>Username</th>
+                                                                                                    <th>Contact</th>
+                                                                                                    <th>Account #</th>
+                                                                                                    <th>Account Holder</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in newUsers track by $index">
+                                                                                                    <td>{{item._id}}</td>
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.contact}}</td>
+                                                                                                    <td>{{item.acc}}</td>
+                                                                                                    <td>{{item.accholder}}</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Modal -->
+                                                                            <div id="myPayout" class="modal fade" role="dialog">
+                                                                                <div class="modal-dialog">
+                                                                                    <!-- Modal content-->
+                                                                                    <div class="modal-content container-fluid">
+                                                                                        <div class="modal-header">
+                                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                            <h4 class="modal-title">Payments Processing</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body container-fluid">
+                                                                                            <div class="col-sm-8 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List Of Payers</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div ng-repeat="item in top5users track by $index" class="bubble me col-sm-4">
+                                                                                                            <p>User ID: {{item._id}}</p>
+                                                                                                            <p>From: {{item.uname}}</p>
+                                                                                                            <p>To: {{currentPayee.uname}}</p>
+                                                                                                            <p>Message: Please deposit E {{currentPayee.amount}}.00 to: {{currentPayee.fname +' '+ currentPayee.lname}} Acc: {{currentPayee.acc}} | {{currentPayee.accholder}} contact number: {{currentPayee.contact}}. You have 24 hours to complete this request. Thank you! </p>
+                                                                                                            <p>Amount: E {{currentPayee.amount}}.00</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c221">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c11">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List of Payees</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div class="bubble me col-sm-10">
+                                                                                                            <p>Proxy ID: {{currentPayee._id}}</p>
+                                                                                                            <p>Username: {{currentPayee.uname}}</p>
+                                                                                                            <p>Full Name: {{currentPayee.fname +' '+ currentPayee.lname}}</p>
+                                                                                                            <p>Prev donation: E {{currentPayee.amount}}</p>
+                                                                                                            <p>Level: {{currentPayee.level}}</p>
+                                                                                                            <p>Day: 0 of every month</p>
+                                                                                                            <p>Expected Pay: E {{currentPayee.amount * 5}}</p>
+                                                                                                            <p>
+                                                                                                                <button type="button" class="btn btn-info btn-sm" ng-click="runInitPayOut(currentPayee._id)">Run Payout</button>
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade bool-container" id="level1">
+                                                                        <div class="bool-container container-fluid">
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bd">
+                                                                                <div class="bool-container panel panel-default">
+                                                                                    <div class="panel-heading" id="obj5733e755f37b4a276f98e9be">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Due Payments</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bf">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level1Users track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button>Send Reminder</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Payouts Due</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in inlineL2 track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myPayout">Pay Out</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Level 1 Users </h3>
+                                                                                            <center>
+                                                                                                <div class="pull-right">
+                                                                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myPayout1" ng-click="initPayout1()">Initialise Payout</button>
+                                                                                                </div>
+                                                                                            </center>
+                                                                                            <h3> <span class="label label-default">Total: {{'E' + totamtL1 + '.00'}}</span></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>Userid</th>
+                                                                                                    <th>Username</th>
+                                                                                                    <th>Contact</th>
+                                                                                                    <th>Account #</th>
+                                                                                                    <th>Account Holder</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level1Users track by $index">
+                                                                                                    <td>{{item._id}}</td>
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.contact}}</td>
+                                                                                                    <td>{{item.acc}}</td>
+                                                                                                    <td>{{item.accholder}}</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Modal -->
+                                                                            <div id="myPayout1" class="modal fade" role="dialog">
+                                                                                <div class="modal-dialog">
+                                                                                    <!-- Modal content-->
+                                                                                    <div class="modal-content container-fluid">
+                                                                                        <div class="modal-header">
+                                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                            <h4 class="modal-title">Payments Processing</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body container-fluid">
+                                                                                            <div class="col-sm-8 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List Of Payers</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div ng-repeat="item in top5users track by $index" class="bubble me col-sm-4">
+                                                                                                            <p>User ID: {{item._id}}</p>
+                                                                                                            <p>From: {{item.uname}}</p>
+                                                                                                            <p>To: {{currentPayee.uname}}</p>
+                                                                                                            <p>Message: Please deposit E {{item.amount}}.00 to: {{currentPayee.fname +' '+ currentPayee.lname}} Acc: {{currentPayee.acc}} | {{currentPayee.accholder}} contact number: {{currentPayee.contact}}. You have 24 hours to complete this request. Thank you! </p>
+                                                                                                            <p>Amount: E {{item.amount}}.00 </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c221">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c11">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List of Payees</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div class="bubble me col-sm-10">
+                                                                                                            <p>Proxy ID: {{currentPayee._id}}</p>
+                                                                                                            <p>Username: {{currentPayee.uname}}</p>
+                                                                                                            <p>Full Name: {{currentPayee.fname +' '+ currentPayee.lname}}</p>
+                                                                                                            <p>Prev donation: E {{currentPayee.amount}}</p>
+                                                                                                            <p>Level: {{currentPayee.level}}</p>
+                                                                                                            <p>Day: 0 of every month</p>
+                                                                                                            <p>Expected Pay: E {{currentPayee.amount * 5}}</p>
+                                                                                                            <p>
+                                                                                                                <button type="button" class="btn btn-info btn-sm" ng-click="runInitPayOut(currentPayee._id)">Run Payout</button>
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade bool-container" id="level2">
+                                                                        <div class="bool-container container-fluid">
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bd">
+                                                                                <div class="bool-container panel panel-default">
+                                                                                    <div class="panel-heading" id="obj5733e755f37b4a276f98e9be">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Due Payments</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bf">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level2Users track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button>Send Reminder</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Payouts Due</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in inlineL3 track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myPayout">Pay Out</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Level 2 Users </h3>
+                                                                                            <center>
+                                                                                                <div class="pull-right">
+                                                                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myPayout2" ng-click="initPayout2()">Initialise Payout</button>
+                                                                                                </div>
+                                                                                            </center>
+                                                                                            <h3> <span class="label label-default">Total: {{'E' + totamtL2 + '.00'}}</span></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>Userid</th>
+                                                                                                    <th>Username</th>
+                                                                                                    <th>Contact</th>
+                                                                                                    <th>Account #</th>
+                                                                                                    <th>Account Holder</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level2Users track by $index">
+                                                                                                    <td>{{item._id}}</td>
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.contact}}</td>
+                                                                                                    <td>{{item.acc}}</td>
+                                                                                                    <td>{{item.accholder}}</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Modal -->
+                                                                            <div id="myPayout2" class="modal fade" role="dialog">
+                                                                                <div class="modal-dialog">
+                                                                                    <!-- Modal content-->
+                                                                                    <div class="modal-content container-fluid">
+                                                                                        <div class="modal-header">
+                                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                            <h4 class="modal-title">Payments Processing</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body container-fluid">
+                                                                                            <div class="col-sm-8 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List Of Payers</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div ng-repeat="item in top5users track by $index" class="bubble me col-sm-4">
+                                                                                                            <p>User ID: {{item._id}}</p>
+                                                                                                            <p>From: {{item.uname}}</p>
+                                                                                                            <p>To: {{currentPayee.uname}}</p>
+                                                                                                            <p>Message: Please deposit E {{currentPayee.amount}}.00 to: {{currentPayee.fname +' '+ currentPayee.lname}} Acc: {{currentPayee.acc}} | {{currentPayee.accholder}} contact number: {{currentPayee.contact}}. You have 24 hours to complete this request. Thank you! </p>
+                                                                                                            <p>Amount: E {{currentPayee.amount}}.00</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c221">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c11">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List of Payees</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div class="bubble me col-sm-10">
+                                                                                                            <p>Proxy ID: {{currentPayee._id}}</p>
+                                                                                                            <p>Username: {{currentPayee.uname}}</p>
+                                                                                                            <p>Full Name: {{currentPayee.fname +' '+ currentPayee.lname}}</p>
+                                                                                                            <p>Prev donation: E {{currentPayee.amount}}</p>
+                                                                                                            <p>Level: {{currentPayee.level}}</p>
+                                                                                                            <p>Day: 0 of every month</p>
+                                                                                                            <p>Expected Pay: E {{currentPayee.amount * 5}}</p>
+                                                                                                            <p>
+                                                                                                                <button type="button" class="btn btn-info btn-sm" ng-click="runInitPayOut(currentPayee._id)">Run Payout</button>
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade bool-container" id="level3">
+                                                                        <div class="bool-container container-fluid">
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bd">
+                                                                                <div class="bool-container panel panel-default">
+                                                                                    <div class="panel-heading" id="obj5733e755f37b4a276f98e9be">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Due Payments</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e755f37b4a276f98e9bf">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level3Users track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button>Send Reminder</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>Payouts Due</h3></div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-0 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>User</th>
+                                                                                                    <th>Amount</th>
+                                                                                                    <th>Level</th>
+                                                                                                    <th>Action</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in inlineL4 track by $index">
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.amount}}</td>
+                                                                                                    <td>{{item.level}}</td>
+                                                                                                    <td>
+                                                                                                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myPayout">Pay Out</button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c0">
+                                                                                <div class="bool-container panel panel-primary">
+                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                        <div class="bool-container panel-title">
+                                                                                            <h3>New Users </h3>
+                                                                                            <center>
+                                                                                                <div class="pull-right">
+                                                                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myPayout3" ng-click="initPayout3()">Initialise Payout</button>
+                                                                                                </div>
+                                                                                            </center>
+                                                                                            <h3> <span class="label label-default">Total: {{'E' + totamtL3 + '.00'}}</span></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-12 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                        <div class="bool-container panel-body">
+                                                                                            <table class="table">
+                                                                                                <tr>
+                                                                                                    <th>Userid</th>
+                                                                                                    <th>Username</th>
+                                                                                                    <th>Contact</th>
+                                                                                                    <th>Account #</th>
+                                                                                                    <th>Account Holder</th>
+                                                                                                </tr>
+                                                                                                <tr ng-repeat="item in level3Users track by $index">
+                                                                                                    <td>{{item._id}}</td>
+                                                                                                    <td>{{item.uname}}</td>
+                                                                                                    <td>{{item.contact}}</td>
+                                                                                                    <td>{{item.acc}}</td>
+                                                                                                    <td>{{item.accholder}}</td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- Modal -->
+                                                                            <div id="myPayout3" class="modal fade" role="dialog">
+                                                                                <div class="modal-dialog">
+                                                                                    <!-- Modal content-->
+                                                                                    <div class="modal-content container-fluid">
+                                                                                        <div class="modal-header">
+                                                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                            <h4 class="modal-title">Payments Processing</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body container-fluid">
+                                                                                            <div class="col-sm-8 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c2">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c1">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List Of Payers</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div ng-repeat="item in top5users track by $index" class="bubble me col-sm-4">
+                                                                                                            <p>User ID: {{item._id}}</p>
+                                                                                                            <p>From: {{item.uname}}</p>
+                                                                                                            <p>To: {{currentPayee.uname}}</p>
+                                                                                                            <p>Message: Please deposit E {{currentPayee.amount}}.00 to: {{currentPayee.fname +' '+ currentPayee.lname}} Acc: {{currentPayee.acc}} | {{currentPayee.accholder}} contact number: {{currentPayee.contact}}. You have 24 hours to complete this request. Thank you! </p>
+                                                                                                            <p>Amount: E {{currentPayee.amount}}.</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4 col-sm-offset-0" id="obj5733e78df37b4a276f98e9c221">
+                                                                                                <div class="bool-container panel panel-primary">
+                                                                                                    <div class="panel-heading" id="obj5733e78df37b4a276f98e9c11">
+                                                                                                        <div class="bool-container panel-title">
+                                                                                                            <h3>List of Payees</h3></div>
+                                                                                                    </div>
+                                                                                                    <div class="bool-container panel-body">
+                                                                                                        <div class="bubble me col-sm-10">
+                                                                                                            <p>Proxy ID: {{currentPayee._id}}</p>
+                                                                                                            <p>Username: {{currentPayee.uname}}</p>
+                                                                                                            <p>Full Name: {{currentPayee.fname +' '+ currentPayee.lname}}</p>
+                                                                                                            <p>Prev donation: E {{currentPayee.amount}}</p>
+                                                                                                            <p>Level: {{currentPayee.level}}</p>
+                                                                                                            <p>Day: 0 of every month</p>
+                                                                                                            <p>Expected Pay: E {{currentPayee.amount * 5}}</p>
+                                                                                                            <p>
+                                                                                                                <button type="button" class="btn btn-info btn-sm" ng-click="runInitPayOut(currentPayee._id)">Run Payout</button>
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tab-pane fade bool-container" id="level4"> </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
